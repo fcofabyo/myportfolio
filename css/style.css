@@ -1,51 +1,64 @@
-/* Estilos globais */
+/* Corpo da página */
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #121212; /* Fundo bem escuro */
-  color: #e0e0e0; /* Texto claro para contraste */
+  background-color: #121212; /* Fundo escuro */
+  color: #e0e0e0; /* Texto claro */
 }
 
 /* Cabeçalho */
 header {
-  background-color: #1f1f1f; /* Tom de cinza escuro */
+  background-color: #3a3f87; /* Azul profundo */
   color: #fff;
   padding: 2rem 0;
-  position: relative; /* Para posicionar a imagem absoluta dentro do header */
+  position: relative;
 }
+
 .header-content {
   display: flex;
   align-items: center;
   justify-content: center;
   z-index: 5;
+  flex-direction: column; /* Organiza o texto em coluna */
+  text-align: left; /* Alinha o texto à esquerda */
 }
 
+/* Foto de perfil */
 .profile-photo {
   position: absolute;
-  top: 10px; /* Ajuste conforme necessário */
-  left: 10px; /* Ajuste conforme necessário */
-  width: 150px; /* Aumentando a foto */
-  height: 150px; /* Aumentando a foto */
+  top: 10px;
+  left: 10px;
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
   overflow: hidden;
-  z-index: 10; /* Garante que a foto fique acima do conteúdo */
+  z-index: 10;
 }
 
 .profile-photo img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Ajusta a imagem para preencher o espaço do círculo */
-  object-position: top center; /* Posiciona a imagem para que a parte superior da foto fique visível */
-}
-.header-text h1 {
-  font-size: 2.5rem; /* Tamanho de texto maior */
-  margin: 0;
+  object-fit: cover;
+  object-position: top center;
 }
 
+/* Título com fundo colorido */
+.header-text h1 {
+  font-size: 2.5rem;
+  margin: 0;
+  background-color: #f5a623; /* Laranja claro */
+  padding: 0.5rem;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra leve */
+  display: inline-block; /* Ajusta o fundo ao tamanho do texto */
+}
+
+/* Parágrafo */
 .header-text p {
   font-size: 1.2rem;
   margin-top: 0.5rem;
+  text-align: left;
 }
 
 /* Container principal */
@@ -58,7 +71,7 @@ header {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Habilidades e projetos */
+/* Habilidades e Projetos */
 .skills,
 .projects {
   margin-top: 2rem;
@@ -78,9 +91,49 @@ ul li {
   color: #f5f5f5; /* Texto claro */
 }
 
-/* Botões e links */
+/* Habilidades - ícones */
+.skills-icons {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.skill {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+
+.skill i {
+  font-size: 3rem; /* Tamanho uniforme para todos os ícones */
+}
+
+/* Logo do TypeScript - Ajuste para ter o mesmo tamanho */
+.skill img {
+  width: 48px; /* Ajuste para 48px para igualar com os outros ícones */
+  height: 48px; /* Tamanho fixo */
+  object-fit: contain; /* Não distorce a imagem */
+  display: block;
+  margin: 0 auto;
+}
+
+/* Exibição do nome ao clicar */
+.skill span {
+  display: none;
+  margin-top: 0.5rem;
+  font-size: 1.1rem;
+  color: #f5f5f5;
+  background: #5fa47f; /* Verde suave para o nome */
+  padding: 0.5rem;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Botões e Links */
 a {
-  color: #8ab4f8; /* Azul claro */
+  color: #f5a623; /* Laranja claro */
   text-decoration: none;
 }
 
@@ -92,7 +145,7 @@ a:hover {
   display: inline-block;
   margin-top: 1rem;
   padding: 0.8rem 1.5rem;
-  background-color: #8ab4f8; /* Botão azul claro */
+  background-color: #5fa47f; /* Verde suave */
   color: #fff;
   border: none;
   border-radius: 5px;
@@ -100,5 +153,44 @@ a:hover {
 }
 
 .btn:hover {
-  background-color: #6e92d1; /* Tom mais escuro de azul */
+  background-color: #4b8b69; /* Tom mais escuro de verde */
+}
+
+/* Seção de Contato */
+#contato ul {
+  list-style: none;
+  padding: 0;
+}
+
+#contato ul li {
+  margin: 1rem 0;
+}
+
+#contato i {
+  margin-right: 0.5rem;
+}
+
+/* Botão de "Saiba mais sobre mim" */
+a .btn {
+  margin-top: 1.5rem;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .skills-icons {
+    flex-wrap: wrap; /* Permite que as habilidades quebrem para a próxima linha */
+    gap: 1.5rem; /* Ajusta o espaço entre os itens */
+  }
+
+  .skill img {
+    width: 60px; /* Ajusta o tamanho para telas menores */
+    height: 60px;
+  }
+}
+
+@media (max-width: 480px) {
+  .skill img {
+    width: 50px; /* Ajusta mais ainda para telas muito pequenas */
+    height: 50px;
+  }
 }
