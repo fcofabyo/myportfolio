@@ -12,7 +12,6 @@ header {
   background-color: #3a3f87; /* Azul profundo */
   color: #fff;
   padding: 2rem 0;
-  position: relative;
 }
 
 .header-content {
@@ -20,20 +19,18 @@ header {
   align-items: center;
   justify-content: center;
   z-index: 5;
-  flex-direction: column; /* Organiza o texto em coluna */
-  text-align: left; /* Alinha o texto à esquerda */
+  flex-direction: column; /* Organiza o texto em coluna por padrão */
+  text-align: center; /* Alinha o texto ao centro */
 }
 
 /* Foto de perfil */
 .profile-photo {
-  position: absolute;
-  top: 10px;
-  left: 10px;
   width: 150px;
   height: 150px;
   border-radius: 50%;
   overflow: hidden;
   z-index: 10;
+  margin-bottom: 1rem; /* Ajusta o espaçamento entre a foto e o texto */
 }
 
 .profile-photo img {
@@ -58,7 +55,10 @@ header {
 .header-text p {
   font-size: 1.2rem;
   margin-top: 0.5rem;
-  text-align: left;
+  text-align: center; /* Alinha o texto ao centro */
+  max-width: 700px; /* Limita a largura do parágrafo */
+  margin-left: auto; /* Centraliza horizontalmente */
+  margin-right: auto; /* Centraliza horizontalmente */
 }
 
 /* Container principal */
@@ -177,20 +177,48 @@ a .btn {
 
 /* Responsividade */
 @media (max-width: 768px) {
+  .header-content {
+    flex-direction: column; /* Coloca a foto e o texto em coluna */
+    align-items: center; /* Centraliza os elementos */
+    text-align: center; /* Alinha o texto ao centro */
+  }
+
+  .profile-photo {
+    margin-bottom: 1rem; /* Ajusta o espaçamento */
+  }
+
+  .header-text h1 {
+    font-size: 2rem; /* Reduz o tamanho do título */
+  }
+
+  .header-text p {
+    font-size: 1rem; /* Reduz o tamanho do texto */
+  }
+
+  /* Ajuste para as habilidades - fica em coluna em telas menores */
   .skills-icons {
     flex-wrap: wrap; /* Permite que as habilidades quebrem para a próxima linha */
     gap: 1.5rem; /* Ajusta o espaço entre os itens */
+    justify-content: center;
   }
 
   .skill img {
-    width: 60px; /* Ajusta o tamanho para telas menores */
+    width: 60px; /* Ajusta o tamanho das imagens das habilidades */
     height: 60px;
   }
 }
 
 @media (max-width: 480px) {
+  .skills-icons {
+    gap: 1rem; /* Diminui o espaço entre os itens */
+  }
+
   .skill img {
-    width: 50px; /* Ajusta mais ainda para telas muito pequenas */
+    width: 50px; /* Ajusta ainda mais para telas muito pequenas */
     height: 50px;
+  }
+
+  .header-text p {
+    font-size: 0.9rem; /* Diminui o tamanho do texto */
   }
 }
