@@ -3,15 +3,17 @@ document.querySelectorAll(".skill").forEach((skill) => {
     const name = skill.getAttribute("data-name");
     let span = skill.querySelector("span");
 
+    // Alterna a visibilidade do nome
     if (!span) {
-      // Cria o elemento de texto
       span = document.createElement("span");
       span.textContent = name;
       skill.appendChild(span);
       span.style.display = "block";
     } else {
-      // Alterna a visibilidade do texto
       span.style.display = span.style.display === "block" ? "none" : "block";
     }
+
+    // Alterna a classe 'clicked' para adicionar/remover a borda
+    skill.classList.toggle("clicked");
   });
 });
