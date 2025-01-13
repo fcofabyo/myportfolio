@@ -36,3 +36,15 @@ document.querySelectorAll(".experience-item").forEach((item) => {
     document.getElementById(id).style.display = "block"; // Exibe o detalhe selecionado
   });
 });
+
+// Seleciona automaticamente o Atacadão ao carregar a página
+document.addEventListener("DOMContentLoaded", () => {
+  const atacadaoItem = document.querySelector(".experience-item.atacadao");
+  if (atacadaoItem) {
+    atacadaoItem.classList.add("active"); // Garante que o Atacadão esteja ativo
+    const atacadaoDetail = document.getElementById("atacadao-detail");
+    if (atacadaoDetail) {
+      atacadaoDetail.style.display = "block"; // Exibe o conteúdo do Atacadão
+    }
+  }
+});
