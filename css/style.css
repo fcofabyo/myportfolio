@@ -131,6 +131,98 @@ ul li {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
+/* Habilidades - Borda ao clicar */
+.skill.clicked {
+  border-radius: 8px;
+}
+
+/* Experiência - Nome destacado */
+.experience-item.active {
+  font-weight: bold;
+}
+
+/* Seção de Experiência */
+.experience {
+  margin-top: 2rem;
+  padding: 1rem 1rem 1rem 2rem; /* Adiciona padding à esquerda para alinhar o título */
+  background-color: #1c1c1c; /* Fundo escuro */
+  border-radius: 8px;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.experience h2 {
+  text-align: left; /* Alinha o título à esquerda */
+  margin-left: -30px; /* Remove qualquer margem extra */
+  color: #fff; /* Mantém a cor do texto branca */
+}
+
+.experience-list {
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
+  margin-bottom: 1rem;
+}
+
+.experience-item {
+  color: #ffffff; /* Texto branco */
+  padding: 0.5rem 1rem;
+  margin: 0.5rem 0;
+  border: 2px solid transparent; /* Borda transparente inicialmente */
+  border-radius: 8px;
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+/* Atacadão ativo */
+.experience-item.atacadao.active {
+  border-color: #f5a623; /* Laranja */
+  color: #f5a623;
+}
+
+/* CRC ativo */
+.experience-item.crc.active {
+  border-color: #1572b6; /* Azul */
+  color: #1572b6;
+}
+
+/* Stone ativo */
+.experience-item.stone.active {
+  border-color: #4caf50; /* Verde */
+  color: #4caf50;
+}
+
+/* Detalhes da experiência */
+.experience-details {
+  color: #ffffff; /* Texto branco */
+  background-color: #2a2a2a; /* Fundo levemente mais claro */
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  display: none; /* Inicialmente escondido */
+}
+
+.experience-details strong {
+  color: #f5a623; /* Destaque para os títulos */
+}
+
+/* Estilo ao clicar para destacar */
+.experience-item.active {
+  font-weight: bold;
+}
+
+.experience-item.atacadao.active {
+  color: orange;
+}
+
+.experience-item.crc.active {
+  color: blue;
+}
+
+.experience-item.stone.active {
+  color: green;
+}
+
 /* Botões e Links */
 a {
   color: #f5a623; /* Laranja claro */

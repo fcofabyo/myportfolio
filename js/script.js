@@ -1,9 +1,9 @@
+// Funcionalidade para as habilidades
 document.querySelectorAll(".skill").forEach((skill) => {
   skill.addEventListener("click", () => {
     const name = skill.getAttribute("data-name");
     let span = skill.querySelector("span");
 
-    // Alterna a visibilidade do nome
     if (!span) {
       span = document.createElement("span");
       span.textContent = name;
@@ -13,7 +13,26 @@ document.querySelectorAll(".skill").forEach((skill) => {
       span.style.display = span.style.display === "block" ? "none" : "block";
     }
 
-    // Alterna a classe 'clicked' para adicionar/remover a borda
     skill.classList.toggle("clicked");
+  });
+});
+
+// Adiciona evento aos itens de experiência
+document.querySelectorAll(".experience-item").forEach((item) => {
+  item.addEventListener("click", () => {
+    // Remove o estilo 'active' de todos os itens
+    document.querySelectorAll(".experience-item").forEach((el) => {
+      el.classList.remove("active");
+    });
+
+    // Adiciona o estilo 'active' apenas ao item clicado
+    item.classList.add("active");
+
+    // Exibe os detalhes correspondentes ao item clicado
+    const id = item.getAttribute("data-target");
+    document.querySelectorAll(".experience-details").forEach((detail) => {
+      detail.style.display = "none"; // Oculta todos os detalhes
+    });
+    document.getElementById(id).style.display = "block"; // Exibe o detalhe selecionado
   });
 });

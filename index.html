@@ -9,6 +9,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
     />
+    <link rel="icon" href="/img/favicon.ico" type="image/x-icon" />
   </head>
   <body>
     <header>
@@ -24,8 +25,7 @@
           <p>
             Me chamo Fábio, sou um desenvolvedor apaixonado por tecnologia e
             inovação. Meu objetivo é criar soluções eficientes e intuitivas,
-            focadas na experiência do usuário. <br />
-            <br />
+            focadas na experiência do usuário. <br /><br />
             Acredito no aprendizado contínuo e estou sempre em busca de novos
             desafios para aprimorar minhas habilidades e contribuir com projetos
             que façam a diferença.
@@ -84,16 +84,16 @@
         <h2>Projetos</h2>
         <ul>
           <li>
-            <strong>Projeto 1:</strong> <a href="#"></a> Formulário usando HTML
-            e CSS.
+            <strong>Projeto 1:</strong>
+            <a>Formulário usando HTML e CSS.</a>
           </li>
           <li>
-            <strong>Projeto 2:</strong> <a href="#"></a> Primeiro projeto usando
-            React e seus principais conceitos.
+            <strong>Projeto 2:</strong>
+            <a>Primeiro projeto usando React e seus principais conceitos.</a>
           </li>
           <li>
-            <strong>Projeto 3:</strong> <a href="#"></a> Calculadora de
-            impostos, treinando a lógica.
+            <strong>Projeto 3:</strong>
+            <a>Calculadora de impostos, treinando a lógica.</a>
           </li>
         </ul>
       </section>
@@ -103,7 +103,54 @@
         target="_blank"
         class="btn"
       >
-        <i class="fab fa-github"></i> Saiba mais sobre mim
+        <i class="fab fa-github"></i> Veja mais projetos
+      </a>
+
+      <section class="experience">
+        <h2>Experiência</h2>
+        <div class="experience-list">
+          <div class="experience-item atacadao" data-target="atacadao-detail">
+            Atacadão
+          </div>
+          <div class="experience-item crc" data-target="crc-detail">CRC</div>
+          <div class="experience-item stone" data-target="stone-detail">
+            Stone
+          </div>
+        </div>
+        <div
+          class="experience-details"
+          id="atacadao-detail"
+          style="display: none"
+        >
+          <strong>Cargo:</strong> Estoquista/ Funcionário de TI<br />
+          <strong>Função:</strong>
+          Organização de estoque e recebimento de mercadorias / Registro e
+          processamento de chamadas de suporte, Instalação e configuração de
+          hardware de computador, software, sistemas, redes, impressoras e
+          scanners<br />
+          <strong>Tempo:</strong> 2 anos
+        </div>
+        <div class="experience-details" id="crc-detail" style="display: none">
+          <strong>Cargo:</strong> Auxiliar de Back-Office<br />
+          <strong>Função:</strong>
+          Verificar e analisar as reclamações recebidas através do SAC, Emissão
+          e envio de boletos de financiamentos.<br />
+          <strong>Tempo:</strong> 1 ano
+        </div>
+        <div class="experience-details" id="stone-detail" style="display: none">
+          <strong>Cargo:</strong> Analista de suporte de TI<br />
+          <strong>Função:</strong>
+          Administrar ambientes informatizados, prestar suporte técnico ao
+          usuário e o treinamento, elaborar documentação técnica. Estabelecer
+          padrões, coordenar projetos e oferecer soluções para ambientes
+          informatizados e pesquisar tecnologias em informática. Assessorar nas
+          atividades de ensino, pesquisa e extensão.<br />
+          <strong>Tempo:</strong> 8 meses
+        </div>
+      </section>
+
+      <a href="/docs/Profile (2).pdf" target="_blank" class="btn">
+        <i class="fa-solid fa-file"></i> Meu currículo
       </a>
 
       <section id="contato">
@@ -122,22 +169,24 @@
             <a
               href="https://www.linkedin.com/in/francisco-fábio-2b9894231/"
               target="_blank"
-              >franciscofabio</a
             >
+              franciscofabio
+            </a>
           </li>
           <li>
             <i class="fas fa-phone-alt"></i>
             <strong>Telefone:</strong>
             <a
-              href="https://wa.me/5585994148657text=Olá%20SEUNOME,%20tenho%20interesse%20em%20seus%20serviços!"
+              href="https://wa.me/5585994148657?text=Olá!%20Gostaria%20de%20mais%20informações."
               target="_blank"
             >
-              55 85 99414-8657</a
-            >
+              Clique aqui para me chamar no WhatsApp
+            </a>
           </li>
         </ul>
       </section>
     </div>
+
     <script src="js/script.js"></script>
   </body>
 </html>
