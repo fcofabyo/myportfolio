@@ -139,7 +139,7 @@ ul li {
 /* Seção de Experiência */
 .experience {
   margin-top: 2rem;
-  padding: 1rem 1rem 1rem 2rem; /* Adiciona padding à esquerda para alinhar o título */
+  padding: 1rem 4rem 1rem 2rem; /* Adiciona padding à esquerda para alinhar o título */
   background-color: #1c1c1c; /* Fundo escuro */
   border-radius: 8px;
   box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
@@ -154,7 +154,7 @@ ul li {
 .experience-list {
   display: flex;
   justify-content: center;
-  gap: 5rem;
+  gap: 2rem;
   margin-bottom: 1rem;
 }
 
