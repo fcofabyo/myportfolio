@@ -159,8 +159,9 @@ ul li {
 .experience-list {
   display: flex;
   justify-content: center;
-  gap: 5rem;
+  gap: 1rem; /* Reduz o espaço entre os itens */
   margin-bottom: 1rem;
+  flex-wrap: wrap; /* Permite que os itens se movam para a próxima linha em telas menores */
 }
 
 .experience-item {
@@ -172,6 +173,8 @@ ul li {
   cursor: pointer;
   text-align: center;
   transition: all 0.3s ease;
+  flex-basis: 30%; /* Garante que os itens ocupem 30% da largura disponível */
+  box-sizing: border-box; /* Garante que o padding e a borda não aumentem a largura total */
 }
 
 /* Exibição do conteúdo detalhado automaticamente ao abrir a página */
@@ -287,48 +290,17 @@ a .btn {
 
 /* Responsividade */
 @media (max-width: 768px) {
-  .header-content {
-    flex-direction: column; /* Coloca a foto e o texto em coluna */
-    align-items: center; /* Centraliza os elementos */
-    text-align: center; /* Alinha o texto ao centro */
+  .experience-list {
+    gap: 2rem; /* Reduz o gap para telas médias */
   }
 
-  .profile-photo {
-    margin-bottom: 1rem; /* Ajusta o espaçamento */
-  }
-
-  .header-text h1 {
-    font-size: 2rem; /* Reduz o tamanho do título */
-  }
-
-  .header-text p {
-    font-size: 1rem; /* Reduz o tamanho do texto */
-  }
-
-  /* Ajuste para as habilidades - fica em coluna em telas menores */
-  .skills-icons {
-    flex-wrap: wrap; /* Permite que as habilidades quebrem para a próxima linha */
-    gap: 1.5rem; /* Ajusta o espaço entre os itens */
-    justify-content: center;
-  }
-
-  .skill img {
-    width: 60px; /* Ajusta o tamanho das imagens das habilidades */
-    height: 60px;
+  .experience-item {
+    flex-basis: 45%; /* Ajusta os itens para ocupar 45% da largura disponível em telas menores */
   }
 }
 
 @media (max-width: 480px) {
-  .skills-icons {
-    gap: 1rem; /* Diminui o espaço entre os itens */
-  }
-
-  .skill img {
-    width: 50px; /* Ajusta ainda mais para telas muito pequenas */
-    height: 50px;
-  }
-
-  .header-text p {
-    font-size: 0.9rem; /* Diminui o tamanho do texto */
+  .experience-item {
+    flex-basis: 100%; /* Em telas muito pequenas, os itens ocupam toda a largura */
   }
 }

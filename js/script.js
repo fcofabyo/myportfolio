@@ -37,7 +37,6 @@ document.querySelectorAll(".experience-item").forEach((item) => {
   });
 });
 
-// Seleciona automaticamente o Atacadão ao carregar a página
 document.addEventListener("DOMContentLoaded", () => {
   const atacadaoItem = document.querySelector(".experience-item.atacadao");
   if (atacadaoItem) {
