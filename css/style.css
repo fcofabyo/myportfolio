@@ -136,11 +136,6 @@ ul li {
   border-radius: 8px;
 }
 
-/* Experiência - Nome destacado */
-.experience-item.active {
-  font-weight: bold;
-}
-
 /* Seção de Experiência */
 .experience {
   margin-top: 2rem;
@@ -172,10 +167,9 @@ ul li {
   cursor: pointer;
   text-align: center;
   transition: all 0.3s ease;
-  word-wrap: break-word; /* Quebra palavras longas */
-  overflow-wrap: break-word; /* Complemento para quebra de palavras */
 }
 
+/* Detalhes da experiência */
 .experience-details {
   color: #ffffff; /* Texto branco */
   background-color: #2a2a2a; /* Fundo levemente mais claro */
@@ -194,22 +188,61 @@ ul li {
   display: block; /* Exibe o conteúdo detalhado */
 }
 
-/* Atacadão ativo */
+/* Estilo ao clicar para destacar */
+.experience-item.active {
+  font-weight: bold;
+}
+
 .experience-item.atacadao.active {
   border-color: #f5a623; /* Laranja */
   color: #f5a623;
 }
 
-/* CRC ativo */
 .experience-item.crc.active {
   border-color: #1572b6; /* Azul */
   color: #1572b6;
 }
 
-/* Stone ativo */
 .experience-item.stone.active {
   border-color: #4caf50; /* Verde */
   color: #4caf50;
+}
+
+/* Links */
+a {
+  color: #f5a623; /* Laranja claro */
+  text-decoration: none;
+  transition: color 0.3s ease; /* Efeito de transição para o hover */
+}
+
+a:hover {
+  text-decoration: underline;
+  color: #e0e0e0; /* Muda para a cor clara no hover */
+}
+
+/* Botões */
+.btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.8rem 1.5rem;
+  background-color: #5fa47f; /* Verde suave */
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.3s ease; /* Efeito de transição para o hover */
+}
+
+.btn:hover {
+  background-color: #4b8b69; /* Tom mais escuro de verde */
+}
+
+/* Botão com ícone */
+.btn i {
+  margin-right: 0.5rem; /* Espaçamento entre o ícone e o texto */
+  font-size: 1.5rem; /* Aumenta o tamanho do ícone */
+  vertical-align: middle; /* Alinha o ícone ao texto */
 }
 
 /* Responsividade */
@@ -244,18 +277,17 @@ ul li {
     height: 60px;
   }
 
-  /* Seção de experiência em dispositivos móveis */
-  .experience-list {
-    flex-direction: column; /* Coloca os itens de experiência em uma coluna */
-    align-items: center; /* Centraliza os itens */
-    gap: 1rem; /* Diminui o espaçamento entre os itens */
+  /* Ajuste para os links e botões em telas menores */
+  .btn {
+    padding: 0.6rem 1.2rem; /* Ajusta o tamanho do botão para telas menores */
   }
 
-  .experience-item {
-    width: 100%; /* Garante que o item ocupe toda a largura disponível */
-    text-align: center; /* Centraliza o texto */
-    font-size: 1rem; /* Diminui o tamanho da fonte */
-    padding: 0.8rem; /* Ajusta o padding */
+  .btn i {
+    font-size: 1.3rem; /* Reduz o tamanho do ícone */
+  }
+
+  a {
+    font-size: 1rem; /* Ajusta o tamanho da fonte para links em dispositivos móveis */
   }
 }
 
